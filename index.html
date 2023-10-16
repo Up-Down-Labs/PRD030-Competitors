@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <title>E-commerce Website</title>
+</head>
+
+<body
+    style="background-image: linear-gradient(rgb(235, 178, 235), rgb(138, 138, 236)); min-height: 100vh; margin-top:0;">
+    <center>
+        <h1 style="margin: 0;padding-top: 4%;">E-commerce Company Customer Feedback</h1>
+    </center>
+    <div class="contents">
+        <!--Add few elements to the form-->
+        <div><input type="text" id="txtName" placeholder="Enter your name" /></div>
+        <div><input type="text" id="txtAge" placeholder="Enter your age" /></div>
+        <div><input type="text" id="txtEmail" placeholder="Enter your email address" /></div>
+        <div>How often do you visit our website? 
+            <br><input type="radio" name="visit" value="Daily"><span>Daily</span>
+            <br><input type="radio" name="visit" value="Weekly">Weekly
+            <br><input type="radio" name="visit" value="Monthly">Monthly
+            <br><input type="radio" name="visit" value="Rarely">Rarely
+            <br><input type="radio" name="visit" value="Never">Never
+        </div>
+        <div>How did you first learn about our website?
+            <br><input type="radio" name="learn" value="Search engine (e.g., Google)">Search engine (e.g., Google)
+            <br><input type="radio" name="learn" value="Social media">Social media
+            <br><input type="radio" name="learn" value="Friend or family recommendation,">Friend or family recommendation
+            <br><input type="radio" name="learn" value="Advertisement">Advertisement
+            <br><input type="radio" name="learn" value="Others">Others
+        </div>
+        <div>
+            What was your last purchase?
+            <br><br><input type="text" id="product" placeholder="Enter the product name"/>
+        </div>
+        <div><label for="date">When did you purchase it?</label>
+            <br><br>
+            <input type="date" id="date" name="date">
+        </div>
+        <div>Does the product's features meet your expectations?
+            <br><input type="radio" name="expectations" value="Yes">Yes
+            <br><input type="radio" name="expectations" value="No">No
+        </div>
+        <div>Did you find any issue about our delivery service?
+            <br><input type="radio" name="issues" value="Yes">Yes
+            <br><input type="radio" name="issues" value="No">No
+        </div>
+        <div>How likely are you to reccommend our product/services to others?
+            <br><input type="radio" name="reccomend" value="Very likely">Very likely
+            <br><input type="radio" name="reccomend" value="somewhat likely">somewhat likely
+            <br><input type="radio" name="reccomend" value="Not likely">Not likely
+            <br>
+        </div>
+        <center></center>
+        <br>
+        <div class="rating-parent">Rate your experience
+            <div class="rating">
+                <div class="star" id="star1" onclick="starer(1)">&starf;</div>
+                <div class="star" id="star2" onclick="starer(2)">&starf;</div>
+                <div class="star" id="star3" onclick="starer(3)">&starf;</div>
+                <div class="star" id="star4" onclick="starer(4)">&starf;</div>
+                <div class="star" id="star5" onclick="starer(5)">&starf;</div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            Do you have any further suggestions?
+            <br><br>
+            <textarea id="msg" name="msg" placeholder="Write some message ..." style="height:100px"></textarea>
+        </div>
+
+        <!--Add a button to save the data.-->
+        <div>
+            <input type="button" id="bt" value="Submit" onclick="saveDatabase();saveFile();" />
+        </div>
+</body>
+<script src="static/script.js"></script>
+
+</html>
