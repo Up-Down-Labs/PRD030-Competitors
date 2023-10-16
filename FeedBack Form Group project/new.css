@@ -1,0 +1,8 @@
+div#outer{
+    font-size: 25px;
+}
+
+div#inner{
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Times New Roman', Times, serif;
+}
